@@ -1,0 +1,71 @@
+openapi: 3.0.0
+info:
+  title: Movies API
+  contact: {}
+  version: '1.0'
+servers:
+- url: http://localhost:3000
+  variables: {}
+paths:
+  /movies:
+    post:
+      tags:
+      - Misc
+      summary: post movies
+      operationId: postmovies
+      parameters:
+      - name: token
+        in: header
+        description: ''
+        required: true
+        style: simple
+        schema:
+          type: string
+          example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOjEwMSwicm9sZSI6IkVuZ2luZWVyIiwiaWF0IjoxNzA5OTg1NzYxLCJleHAiOjE3MDk5ODkzNjF9.ygbL-5o3UHticIMU2H0cIT7zMSEpb9oeNCKN49Zs5K8
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+      security: []
+    put:
+      tags:
+      - Misc
+      summary: put movies
+      operationId: putmovies
+      parameters:
+      - name: token
+        in: header
+        description: ''
+        required: true
+        style: simple
+        schema:
+          type: string
+          example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOjEwMSwicm9sZSI6IkVuZ2luZWVyIiwiaWF0IjoxNzA5OTg5Njg2LCJleHAiOjE3MDk5OTMyODZ9.9ybFHw_g0OBDRmaX_d08VN3nfUKuVEZ8CUpi01PyvYg
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+    get:
+      tags:
+      - Misc
+      summary: Get movies
+      operationId: Getmovies
+      parameters:
+      - name: token
+        in: header
+        description: ''
+        required: true
+        style: simple
+        schema:
+          type: string
+          example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOjEwMSwicm9sZSI6IkVuZ2luZWVyIiwiaWF0IjoxNzA5OTg5Njg2LCJleHAiOjE3MDk5OTMyODZ9.9ybFHw_g0OBDRmaX_d08VN3nfUKuVEZ8CUpi01PyvYg
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+tags:
+- name: Misc
+  description: ''
